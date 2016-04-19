@@ -11,10 +11,10 @@ board[0][1] = 2
 board[0][2] = 3
 board[1][0] = 4
 board[1][1] = 5
-board[1][2] = 3
+board[1][2] = 6
 board[2][0] = 7
 board[2][1] = 8
-board[2][2] = 3
+board[2][2] = 9
 puts board
 #==============================================================
 #===========================CHECKS IF THE BOARD IS FULL========
@@ -36,3 +36,20 @@ truthtable = [column1,column2,column3]
 puts truthtable.any? {|variable| variable == true}
 puts "previous is the ennumerable"
 puts truthtable
+#===================================================================================================
+#============================================CHECKS FOR ANY ROWS=====================================
+row1 = [board[0][0], board[0][1], board[0][2]].uniq.size == 1
+row2 = [board[1][0], board[1][1], board[1][1]].uniq.size == 1
+row3 = [board[2][0], board[2][1], board[2][2]].uniq.size == 1
+truthtable = [row1,row2,row3]
+puts truthtable.any? {|variable| variable == true}
+
+
+#============================================CHECKS FOR DIAGONALS=====================================
+diag1 = [board[0][0], board[1][1], board[2][2]].uniq.size == 1
+diag2 = [board[2][0], board[1][1], board[0][2]].uniq.size == 1
+
+truthtable = [diag1,diag2]
+
+puts truthtable.any? {|variable| variable == true}
+#===================================================================================================
