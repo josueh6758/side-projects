@@ -5,12 +5,13 @@ using namespace std;
 int main(){
 cout << "this is a tic tac toe game";
 cout << "player one please choose a letter";
-int choice=0;
-while(choice != 1 || choice != 2)
-	cin >> choice;
-if choice == 1
-	cout << "player 1 is X";
-	
+vector<char> column(4, 3);
+vector<vector<char> > 2dvect(2,column);
+
+
+
+
+
 
 }
 

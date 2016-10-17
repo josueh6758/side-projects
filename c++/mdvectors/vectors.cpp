@@ -6,11 +6,21 @@ using namespace std;
 
 
 int main(){
-int i,n;
-i=3;
-n=3;
-vector<vector<int> > vect(i, vector<int>(n));	
-vect[2][2]= 2;
-cout << vect[2][2] << "\n";
-
+FILE* f=fopen("/home/josue/owngit/c++/mdvectors/testfile","rb");
+char c;
+while(fread(&c,1,1,f) !=0){
+	switch(c){
+		case 'O':
+			cout << "o"<< endl;
+			break;
+		case '.':
+			cout << "its a ." << endl;
+			break;
+		case '\n':
+			cout << "space" << endl;
+			break;
+	}
+	
+}
+fclose(f);
 }
