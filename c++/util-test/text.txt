@@ -1,0 +1,3 @@
+hello world
+this line has has one duplicated word
+this is line three
